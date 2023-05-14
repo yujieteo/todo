@@ -1,0 +1,246 @@
+
+\documentclass[%
+  beameroptions={ignorenonframetext,11pt,169},
+  articleoptions={11pt},
+  also={trans,handout,article},
+  ]{beamerswitch}
+\handoutlayout{nup=3plus,border=1pt}
+\articlelayout{maketitle,frametitles=none}
+\usepackage[british]{babel}
+\mode<article>{
+    \usepackage[hmargin=3cm,vmargin=2.5cm]{geometry}
+    \usepackage{amsmath, amsthm, amssymb, amsfonts}
+    \usepackage[T1]{fontenc}
+    \usepackage{listings}
+    \usepackage{color} 
+    \usepackage{xcolor}  
+    \usepackage{hyperref}
+    \usepackage{tikz}
+    \usepackage{float}
+    \usepackage{courier}
+    \usepackage{imakeidx}
+    \usepackage{biblatex}
+    \usepackage{pgfgantt}
+    \addbibresource{ref.bib}
+    
+    \geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+    }
+
+    \definecolor{linkblue}{HTML}{1A0DAB}
+
+    \newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
+    \hypersetup{
+        colorlinks=true, 
+        linktoc=all,    
+        linkcolor=linkblue,  
+    }
+
+    \lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+    \lstset{framextopmargin=50pt,frame=bottomline}
+
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \definecolor{backcolour}{rgb}{0.97,0.97,0.95}
+
+    \lstdefinestyle{mystyle}{
+        backgroundcolor=\color{backcolour},   
+        commentstyle=\color{codegreen},
+        keywordstyle=\color{blue},
+        numberstyle=\tiny\color{codegray},
+        stringstyle=\color{codepurple},
+        basicstyle=\ttfamily\footnotesize,
+        breakatwhitespace=false,         
+        breaklines=true,                 
+        captionpos=b,                    
+        keepspaces=true,                 
+        numbers=left,                    
+        numbersep=5pt,                  
+        showspaces=false,                
+        showstringspaces=false,
+        showtabs=false,                  
+        tabsize=4
+    }
+
+    \usepackage{newtxtext}
+    \usepackage{newtxmath}
+    \usepackage{courier}
+}
+\mode<presentation>{
+    \usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5,debug]{beamerposter} 
+    \usepackage{hyperref}
+    \usepackage{graphicx} % Allows including images
+    \usepackage{booktabs}
+    \usepackage[utf8]{inputenc} % 
+    \usepackage{biblatex}
+    \usepackage{pgfgantt}
+
+    \usepackage{csquotes}      
+    \usepackage{amsmath, amsthm, amssymb, amsfonts}        
+    \usepackage{mathtools}    
+    \usepackage[absolute, overlay]{textpos} 
+    \setlength{\TPHorizModule}{\paperwidth}
+    \setlength{\TPVertModule}{\paperheight}
+    \usepackage{tikz}
+    \usetikzlibrary{overlay-beamer-styles}
+    \usepackage{listings}
+    
+    \usepackage{sty/beamerthemelazy}
+
+    \lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+    \lstset{framextopmargin=50pt,frame=bottomline}
+
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \definecolor{backcolour}{rgb}{0.97,0.97,0.95}
+
+    \lstdefinestyle{mystyle}{
+        backgroundcolor=\color{backcolour},   
+        commentstyle=\color{codegreen},
+        keywordstyle=\color{blue},
+        numberstyle=\tiny\color{codegray},
+        stringstyle=\color{codepurple},
+        basicstyle=\ttfamily\footnotesize,
+        breakatwhitespace=false,         
+        breaklines=true,                 
+        captionpos=b,                    
+        keepspaces=true,                 
+        numbers=left,                    
+        numbersep=5pt,                  
+        showspaces=false,                
+        showstringspaces=false,
+        showtabs=false,                  
+        tabsize=4
+    }
+
+    % \addbibresource{ref.bib}
+}
+\mode<handout>{
+    \usecolortheme{dove}
+}
+
+% The title
+\title[Subtitle]{Title}
+
+\author[]{Teo Yu Jie}
+
+\institute[Institute]{School}
+
+% Date, can be changed to a custom date
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \setcounter{footnote}{0}
+    \frametitle{Contents}
+    \tableofcontents
+\end{frame}
+
+
+\begin{frame}[plain]
+    \frametitle{Title}
+    \setcounter{footnote}{0}
+    \setcounter{equation}{0}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introduction}
+  \setcounter{footnote}{0}
+  \setcounter{equation}{0}
+  \begin{itemize}
+    \item Background: Provides contextual information and sets the stage for the research.
+    \item Problem Statement: Clearly states the research problem or question being addressed.
+    \item Objectives: Outlines the specific goals and aims of the research.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Literature Review}
+  \setcounter{footnote}{0}
+  \setcounter{equation}{0}
+  \begin{itemize}
+    \item Overview of Relevant Literature: Summarizes the key literature and theories related to the research topic.
+    \item Key Concepts and Definitions: Defines important terms and concepts used in the research.
+    \item Previous Research Findings: Highlights the main findings of previous studies related to the research question.
+    \item Gaps in Existing Knowledge: Identifies areas where further research is needed or where the current knowledge is limited.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Methodology}
+  \setcounter{footnote}{0}
+  \setcounter{equation}{0}
+  \begin{itemize}
+    \item Research Design: Describes the overall approach and methodology employed in the research.
+    \item Data Collection: Explains how data was gathered or collected for the study.
+    \item Data Analysis: Describes the methods used to analyze the collected data.
+    \item Variables and Measures: Specifies the variables studied and the measures used to assess them.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Results and Analysis}
+  \setcounter{footnote}{0}
+  \setcounter{equation}{0}
+  \begin{itemize}
+    \item Presentation of Findings: Presents the results of the research in a clear and concise manner.
+    \item Data Interpretation: Provides an explanation and interpretation of the research findings.
+    \item Statistical Analysis: Describes any statistical tests or analyses conducted on the data.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Discussion}
+  \setcounter{footnote}{0}
+  \setcounter{equation}{0}
+  \begin{itemize}
+    \item Summary of Findings: Summarizes the main findings of the research.
+    \item Comparison with Previous Research: Compares and contrasts the current findings with the results of previous studies.
+    \item Implications and Significance: Discusses the implications and significance of the research findings.
+    \item Limitations and Future Research Directions: Identifies limitations of the study and suggests areas for future research.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusion}
+  \setcounter{footnote}{0}
+  \setcounter{equation}{0}
+  \begin{itemize}
+    \item Summary of the Study: Summarizes the main points of the research paper.
+    \item Contributions and Recommendations: Highlights the contributions of the research and provides recommendations for further action or study.
+    \item Final Thoughts: Concludes the presentation with any final remarks or reflections.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{References}
+  \setcounter{footnote}{0}
+  \setcounter{equation}{0}
+  \begin{itemize}
+    \item Lists the references cited in the research paper.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Appendix (if applicable)}
+  \setcounter{footnote}{0}
+  \setcounter{equation}{0}
+  \begin{itemize}
+    \item Includes any supplementary materials or additional information that supports the research.
+  \end{itemize}
+\end{frame}
+
+\end{document}
