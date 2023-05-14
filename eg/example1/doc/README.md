@@ -1,1 +1,0 @@
-This is the doc file for the example
